@@ -1,0 +1,11 @@
+{
+  "about_url": null,
+  "license_url": null,
+  "name": "discourse-orgchart",
+  "component": true,
+  "assets": {
+    "d3": "assets/d3.v7.min.js",
+    "d3_orgchart": "assets/d3-org-chart@2.js",
+    "d3_flextree": "assets/d3-flextree.js"
+  }
+}

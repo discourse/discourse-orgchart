@@ -1,0 +1,65 @@
+.d-editor-preview,
+.cooked {
+  pre[data-code-wrap="svgbob"] {
+    overflow-y: auto;
+    margin: 1em 0;
+    font-size: var(--font-0);
+
+    &:not([data-processed="true"]) {
+      // prevents text flashing while loading
+      font-size: 0;
+    }
+
+    rect.backdrop {
+      fill: transparent;
+    }
+    text {
+      fill: var(--primary);
+      line-height: 0;
+    }
+
+    circle {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 2;
+    }
+
+    line {
+      stroke: var(--primary);
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+
+    path {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+
+    line.dashed {
+      stroke-dasharray: 5;
+    }
+
+    .fg_fill {
+      fill: var(--primary);
+    }
+
+    .bg_fill {
+      fill: transparent;
+      stroke: var(--primary);
+      stroke-width: 2;
+    }
+
+    tspan.head {
+      fill: none;
+      stroke: none;
+    }
+  }
+}
