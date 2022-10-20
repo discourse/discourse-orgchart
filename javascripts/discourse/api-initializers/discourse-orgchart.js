@@ -59,7 +59,12 @@ async function cookOrgChart(element) {
   await loadScript(d3_flextree_script);
 
   var chart;
-  let dataFlattened = d3.csvParse(element.innerText);
+  let headers = element.innerText.split("---")[0].split(',').map((e) => e.trim());
+  let dataFlattened = d3.csvParseRows(element.innerText.split('---')[1], (d, i) => {
+    return Object.fromEntries(
+      d.map((column, index) => [headers[index], column])
+    );
+  }).filter((e) => e.name != '');
 
   chart = new d3.OrgChart()
     .container(element.parentElement.parentElement)
