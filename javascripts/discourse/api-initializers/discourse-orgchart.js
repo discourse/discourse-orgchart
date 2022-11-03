@@ -89,25 +89,19 @@ async function cookOrgChart(element) {
       const color = colors[d.depth % colors.length];
       return `
           <a href="/u/${d.data.id}">
-            <div style="background-color:${color}; position:absolute;margin-top:-1px; margin-left:-1px;width:${
-        d.width
-      }px;height:${d.height}px;border-radius:50px">
-               <img src=" ${
-                 getURLWithCDN(d.data.imageUrl)
-               }" style="position:absolute;margin-top:5px;margin-left:${5}px;border-radius:100px;width:60px;height:60px;" />
+            <div style="background-color:${color}; position:absolute;margin-top:-1px; margin-left:-1px;width:${d.width}px;height:${d.height}px;border-radius:50px">
+               <img src=" ${getURLWithCDN(
+                 d.data.imageUrl
+               )}" style="position:absolute;margin-top:5px;margin-left:${5}px;border-radius:100px;width:60px;height:60px;" />
                <div style="position:absolute;top:-15px;width:${
                  d.width
                }px;text-align:center;color:#fafafa;">
-                     <div style="margin:0 auto;background-color:${color};display:inline-block;padding:8px;padding-bottom:0px;border-radius:5px"> ${
-        d.data.id
-      }</div>
+                     <div style="margin:0 auto;background-color:${color};display:inline-block;padding:8px;padding-bottom:0px;border-radius:5px"> ${d.data.id}</div>
               </div>
 
               <div style="color:#fafafa;font-size:${
                 d.depth < 2 ? 16 : 12
-              }px;font-weight:bold;margin-left:70px;margin-top:15px"> ${
-        d.depth < 2 ? d.data.name : (d.data.name || "").trim().split(/\s+/g)[0]
-      } </div>
+              }px;font-weight:bold;margin-left:70px;margin-top:15px"> ${d.depth < 2 ? d.data.name : (d.data.name || "").trim().split(/\s+/g)[0]} </div>
               <div style="color:#fafafa;margin-left:70px;margin-top:5px"> ${
                 d.data.positionName
               } </div>
@@ -127,7 +121,9 @@ async function cookOrgChart(element) {
         </a>
   `;
     })
-    .render();
+    .render()
+    .expandAll()
+    .fit();
 
   element.parentElement.remove();
 }
