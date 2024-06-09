@@ -1,7 +1,7 @@
 {
-  "about_url": null,
-  "license_url": null,
-  "name": "discourse-orgchart",
+  "about_url": "https://meta.discourse.org/t/discourse-orgchart/242502",
+  "license_url": "https://github.com/discourse/discourse-orgchart/blob/main/LICENSE.txt",
+  "name": "Discourse OrgChart",
   "component": true,
   "assets": {
     "d3": "assets/d3.v7.min.js",
