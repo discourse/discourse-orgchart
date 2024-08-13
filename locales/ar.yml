@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 ar:
+  theme_metadata:
+    description: "مكوِّن OrgChart"
