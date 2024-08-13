@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 es:
+  theme_metadata:
+    description: "Componente de organigrama"

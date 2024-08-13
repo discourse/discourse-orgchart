@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  theme_metadata:
+    description: "OrgChart 组件"
