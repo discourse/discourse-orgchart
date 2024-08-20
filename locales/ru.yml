@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 ru:
+  theme_metadata:
+    description: "Компонент OrgChart"
