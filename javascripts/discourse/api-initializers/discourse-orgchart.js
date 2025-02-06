@@ -1,8 +1,8 @@
 /* global d3 */
 import { later } from "@ember/runloop";
 import { apiInitializer } from "discourse/lib/api";
+import { getURLWithCDN } from "discourse/lib/get-url";
 import loadScript from "discourse/lib/load-script";
-import { getURLWithCDN } from "discourse-common/lib/get-url";
 
 const d3_script = settings.theme_uploads_local.d3;
 const d3_orgchart_script = settings.theme_uploads_local.d3_orgchart;
