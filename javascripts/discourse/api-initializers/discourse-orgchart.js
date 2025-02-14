@@ -137,7 +137,8 @@ async function cookOrgChart(element) {
 export default apiInitializer("0.11.1", (api) => {
   api.decorateCookedElement(
     async (elem, helper) => {
-      const id = helper ? `post_${helper.getModel().id}` : "composer";
+      const post = helper?.getModel();
+      const id = post ? `post_${post.id}` : "composer";
       applyOrgChart(elem, id);
     },
     { id: "discourse-orgchart" }
